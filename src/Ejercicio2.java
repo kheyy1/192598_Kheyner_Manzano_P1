@@ -7,6 +7,7 @@ public class Ejercicio2 {
         double notaA = 0;
         double notaB = 0;
         double notaC = 0;
+        String estado;
         while (esInvalido) { //Pedir el dato hasta que sea valido
             System.out.println("Ingrese su primera nota");
             if (sc.hasNextDouble()) { //Validar que sea double
@@ -57,11 +58,14 @@ public class Ejercicio2 {
         }
         double promedio = (notaA + notaB + notaC) / 3; 
         if (promedio >= 7) { //Una serie de condicionales para mostrar lo solicitado en cada caso
-            System.out.println("Promedio: " + promedio + "\n" + "Estado: Promocionado");
+            estado = "Promocionado";
+            System.out.println("Promedio: " + promedio + "\n" + "Estado: " + estado);
         } else if (promedio >= 4 && promedio < 7) {
-            System.out.println("Promedio: " + promedio + "\n" + "Estado: Regular");
+            estado = "Regular";
+            System.out.println("Promedio: " + promedio + "\n" + "Estado: " + estado);
         } else {
-            System.out.println("Promedio: " + promedio + "\n" + "Estado: Reprobado");
+            estado = "Reprobado";
+            System.out.println("Promedio: " + promedio + "\n" + "Estado: " + estado);
         }
         sc.close();
     }
