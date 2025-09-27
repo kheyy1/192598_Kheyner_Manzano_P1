@@ -6,11 +6,11 @@ public class Ejercicio1 {
         boolean esInvalido = true;
         double numeroX = 0;
         double numeroY = 0;
-        while (esInvalido) {
+        while (esInvalido) { //Bucle que se repite hasta que se ingrese un dato valido
             System.out.println("Ingrese su primer número");
-            if (sc.hasNextDouble()) {
+            if (sc.hasNextDouble()) { //Validar que sea double
                 numeroX = sc.nextDouble();
-                esInvalido = false;
+                esInvalido = false; //Terminar el bucle
             } else {
                 System.out.println("Dato invalido debe ser un numero");
                 sc.nextLine();
@@ -24,10 +24,10 @@ public class Ejercicio1 {
                 esInvalido = false;
             } else {
                 System.out.println("Dato invalido debe ser un numero");
-                sc.nextLine();
+                sc.nextLine(); //Limpiando el buffer
             }
         }
-        if (numeroX >= numeroY) {
+        if (numeroX >= numeroY) { //Una serie de condicionales para mostrar los distintos casos
             double suma = numeroX + numeroY;
             System.out.println("Suma = " + suma);
             double resta = numeroX - numeroY;
@@ -35,7 +35,7 @@ public class Ejercicio1 {
         } else if (numeroX < numeroY) {
             double Producto = numeroX * numeroY;
             System.out.println("Producto = " + Producto);
-            if (numeroY == 0) {
+            if (numeroY == 0) { //Validacion a la division entre 0
                 System.out.println("No se puede dividir entre 0");
             } else {
                 double Division = numeroX / numeroY;

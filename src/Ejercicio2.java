@@ -7,19 +7,19 @@ public class Ejercicio2 {
         double notaA = 0;
         double notaB = 0;
         double notaC = 0;
-        while (esInvalido) {
+        while (esInvalido) { //Pedir el dato hasta que sea valido
             System.out.println("Ingrese su primera nota");
-            if (sc.hasNextDouble()) {
+            if (sc.hasNextDouble()) { //Validar que sea double
                 notaA = sc.nextDouble();
-                if (notaA < 0 || notaA > 10) {
+                if (notaA < 0 || notaA > 10) { //Validar que este en el rango solicitado
                     System.out.println("La nota debe estar en el rango [0,10]");
                     sc.nextLine();
                 } else {
-                    esInvalido = false;
+                    esInvalido = false; //Terminar el bucle while pues el dato ingresado es valido
                 }
             } else {
                 System.out.println("Dato invalido debe ser un numero");
-                sc.nextLine();
+                sc.nextLine(); //Limpiar buffer
             }
         }
         esInvalido = true;
@@ -55,8 +55,8 @@ public class Ejercicio2 {
                 sc.nextLine();
             }
         }
-        double promedio = (notaA + notaB + notaC) / 3;
-        if (promedio >= 7) {
+        double promedio = (notaA + notaB + notaC) / 3; 
+        if (promedio >= 7) { //Una serie de condicionales para mostrar lo solicitado en cada caso
             System.out.println("Promedio: " + promedio + "\n" + "Estado: Promocionado");
         } else if (promedio >= 4 && promedio < 7) {
             System.out.println("Promedio: " + promedio + "\n" + "Estado: Regular");

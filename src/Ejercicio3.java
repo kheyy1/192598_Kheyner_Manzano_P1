@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean esInvalido = true;
+        boolean esInvalido = true; //Declaracion y definicion de variables y arreglos
         int[] valoresA = new int[5];
         int[] valoresB = new int[5];
         int[] valoresC = new int[5];
@@ -51,10 +51,11 @@ public class Ejercicio3 {
         for (int i = 0; i < 5; i++) { //Mostrar la lista C
             System.out.print(valoresC[i] + " ");
         }
-        int sumatoria = 0;
+        int sumatoria = 0; //Variable que va sumando cada elemento de C
         for (int i = 0; i < 5; i++) {
-            sumatoria += valoresC[i];
+            sumatoria += valoresC[i]; // += es un operador de sumatoria
         }
         System.out.println("Suma: " + sumatoria);
+        sc.close();
     }
 }
